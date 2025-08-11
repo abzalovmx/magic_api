@@ -27,4 +27,6 @@ class CreateUrlEndpoint:
 
     def check_status_is_available(self):
         assert self.status == 'available'
-# 52-58
+
+res = CreateUrlEndpoint()
+print(res.create_short_url_for_long_url('https://petstore.swagger.io/v2/pet/findByStatus?status=available').json())
